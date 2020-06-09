@@ -1,0 +1,566 @@
+body {
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0c002b;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.box .inputbox {
+  position: relative;
+}
+
+.box .inputbox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputbox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label {
+  top: -18px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #0357f4;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* box */
+
+.box {
+  position: absolute;
+  left: 50%;
+  letter-spacing: 4px;
+  overflow: hidden;
+}
+
+/* .box:before {
+  content: "";
+   position: absolute;
+  top: 0;
+  left: 0px;
+  bottom: 0px; 
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+} */
+
+.box span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #0c002b, #1779ff);
+  animation: line1 2s linear infinite;
+}
+
+@keyframes line1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.box span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0c002b, #1779ff);
+  animation: line2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes line2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.box span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #0c002b, #1779ff);
+  animation: line3 2s linear infinite;
+}
+
+@keyframes line3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.box span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #0c002b, #1779ff);
+  animation: line4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes line4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.aReimbursement {
+  border: 1px solid black;
+  margin: 1.2em;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.usersSign {
+  text-align: center;
+}
+
+.profileArea {
+  height: 40%;
+}
+
+.navBar {
+  background-color: black;
+  border: 1px solid #1779ff;
+}
+
+.navTitle {
+  color: white;
+  text-align: center;
+}
+
+.usersProfileArea {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.aReimbursementStyle {
+  border: 1px solid black;
+  margin: 1.2em;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  padding: 20px;
+  background-color: white;
+}
+
+.pending:hover,
+#pending:hover {
+  color: white;
+  background-color: yellow;
+  transition: 1s ease all;
+}
+.pending,
+#pending {
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.all:hover {
+  color: white;
+  background-color: purple;
+  transition: 1s ease all;
+}
+
+.all {
+  border: 1px solid purple;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.approve,
+#approve {
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.approve:hover,
+#approve:hover {
+  color: white;
+  background-color: green;
+  transition: 1s ease all;
+}
+
+.deny,
+#deny {
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.deny:hover,
+#deny:hover {
+  color: white;
+  background-color: red;
+  transition: 1s ease all;
+}
+
+.singleTitle {
+  color: white;
+  padding: 15px;
+}
+
+.singleReimburseTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.modified {
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.modified:hover {
+  color: #1779ff;
+  transition: 1s ease all;
+}
+
+.modify {
+  color: yellow;
+}
+
+.modify:hover {
+  color: #1779ff;
+  transition: 1s ease all;
+}
+
+.formArea {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
+.navigation,
+.reimbursementButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.personalInfoTitle,
+.reimbursementInfoTitle {
+  color: black;
+  text-align: center;
+  padding: 1.1em;
+}
+
+.usersReimbursementArea {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.reimbursementArea,
+.profileArea {
+  background-color: white;
+  width: 45%;
+  margin: 1.2em;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+}
+
+.aReimbursementTitleId {
+  text-align: center;
+}
+
+.cardFormat {
+  background-color: white;
+  border: 2px solid black;
+  width: 45%;
+  border-radius: 30px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.homeLayout {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logout,
+.managerLogout {
+  padding: 1.1em;
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.inputId,
+.inputButton {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.logout:hover,
+.managerLogout:hover {
+  background-color: red;
+  transition: all 1s ease;
+}
+
+h2 {
+  color: white;
+}
+
+.title {
+  color: #1779ff;
+  text-align: center;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+
+.student-profile .card {
+  border-radius: 10px;
+}
+
+.student-profile .card .card-header .profile_img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+}
+
+.student-profile .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.student-profile .card p {
+  font-size: 16px;
+  color: #000;
+}
+
+.student-profile .table th,
+.student-profile .table td {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #000;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.form-style-5 {
+  max-width: 520px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  background: #f4f7f8;
+  border-radius: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset {
+  border: none;
+}
+.form-style-5 legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.form-style-5 label {
+  display: block;
+  margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 30px;
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus {
+  background: #d2d9dd;
+}
+.form-style-5 select {
+  -webkit-appearance: menulist-button;
+  height: 35px;
+}
+.form-style-5 .number {
+  background: yellow;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"] {
+  position: relative;
+  display: block;
+  padding: 19px 39px 18px 39px;
+  color: #fff;
+  border-radius: 100px;
+  border: 1px yellow solid;
+  margin: 0 auto;
+  background: #1779ff;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  width: 100%;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover {
+  background: #1779ff;
+  border-radius: 100px;
+  border: 1px #1779ff solid;
+  color: #e2e2e2;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #109177;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
